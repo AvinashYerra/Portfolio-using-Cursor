@@ -236,6 +236,8 @@ body[data-theme="light"] .header p {
     transition: all 0.3s ease;
     font-weight: 500;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .social-link:hover {
@@ -244,8 +246,13 @@ body[data-theme="light"] .header p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.social-link:active {
+    transform: translateY(0);
+}
+
 .social-icon {
     font-size: 1.2em;
+    pointer-events: none;
 }
 
 body[data-theme="light"] .social-link {
